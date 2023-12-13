@@ -13,8 +13,8 @@ export default {
 
 		colors: {
 			main: '#10272d',
-			primary: '#fc5434',
-			secondary: '#fb874f',
+			primary: '#118ab2',
+			secondary: '#06d6a0',
 			danger: '#eb0914',
 			success: '#44944A',
 			new: '#f6d514',
