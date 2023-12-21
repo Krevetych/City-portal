@@ -30,26 +30,7 @@ app.delete('/categorys/:id', CategoryController.delete)
 
 app.listen(PORT, () => {
 	console.log(`SERVER 🎉 on PORT: ${PORT}`)
-
-	try {
-		AppDataSource.initialize()
-			.then(() => console.log(`DB 🎉`))
-			.catch(error => console.log('DB error: ', error))
-		const time = setTimeout(() => {
-			const defaultUser = new User()
-			defaultUser.role = Role.ADMIN
-			defaultUser.surname = 'х'
-			defaultUser.name = 'х'
-			defaultUser.patronymic = 'х'
-			defaultUser.login = 'admin'
-			defaultUser.email = 'admin@example.com'
-			defaultUser.password = '123456'
-			defaultUser.problems = []
-			UserRepo.save(defaultUser)
-		}, 2000)
-		clearTimeout(time)
-		console.log('User ok')
-	} catch (error) {
-		console.log(error)
-	}
+	AppDataSource.initialize()
+		.then(() => console.log(`DB 🎉`))
+		.catch(error => console.log('DB error: ', error))
 })
