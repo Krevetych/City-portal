@@ -13,12 +13,12 @@ const ProblemTab = () => {
 					!user?.problems?.length ? 'flex' : 'hidden'
 				} flex-col items-center justify-center gap-5`}
 			>
-				<p className='text-center mt-10 font-bold text-2xl'>
+				<p className='text-center mt-10 font-bold text-xl md:text-2xl'>
 					Вы еще не создавали заявки
 				</p>
 				<NavLink
 					to='/problems'
-					className='bg-primary rounded-lg duration-500 py-2 px-4 text-xl font-semibold hover:bg-secondary'
+					className='bg-primary rounded-lg duration-500 py-2 px-4 text-md font-semibold hover:bg-secondary md:text-xl'
 				>
 					Создать заявку
 				</NavLink>

@@ -34,9 +34,9 @@ const RealTimeCount = () => {
 		<div
 			className={`${
 				!visible ? 'opacity-0' : 'opacity-100'
-			} fixed z-50 flex gap-2 bottom-[81px] text-md bg-primary w-fit font-bold right-0 p-3 m-2 rounded-lg duration-500 md:bottom-0 md:text-xl`}
+			} fixed z-50 flex gap-2 bottom-[81px] text-sm bg-primary w-fit opacity-20 font-bold right-0 p-3 m-2 rounded-lg duration-500 hover:opacity-100 md:bottom-0 md:text-xl`}
 		>
-			Количество решенных заявок: {count}
+			Решенных заявок: {count}
 			<img src='./modal/close.svg' alt='' onClick={click} />
 		</div>
 	)

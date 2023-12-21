@@ -14,7 +14,7 @@ const SettingsTab = () => {
 	}
 	return (
 		<>
-			<p className='hidden text-center mt-10 font-bold text-2xl md:block'>
+			<p className='hidden text-center mt-10 font-bold text-xl md:block md:text-2xl'>
 				Пока что пусто, но скоро мы это исправим
 			</p>
 			<div className='flex justify-between items-center mt-5 md:hidden'>
@@ -44,7 +44,7 @@ const SettingsTab = () => {
 			<div
 				className={`${
 					user ? 'block' : 'hidden'
-				} text-end text-danger font-bold text-xl mt-5 md:hidden`}
+				} text-end text-danger font-bold text-md mt-5 md:hidden`}
 				onClick={handleLogout}
 			>
 				Выход

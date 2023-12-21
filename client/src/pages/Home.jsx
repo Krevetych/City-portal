@@ -31,7 +31,7 @@ const Home = () => {
 				Последние решенные проблемы
 			</p>
 			{problem?.filter(e => e.status === 'Решена').length === 0 ? (
-				<p className='text-center mt-5 font-bold text-2xl'>
+				<p className='text-center mt-5 font-bold text-xl md:text-2xl'>
 					Мы еще не решили ни одной проблемы
 				</p>
 			) : (
@@ -57,7 +57,7 @@ const Home = () => {
 								<p className='font-bold text-xl md:text-3xl md:font-black'>
 									{item.title}
 								</p>
-								<div className='flex items-center justify-between'>
+								<div className='flex flex-col md:items-center md:justify-between md:flex-row'>
 									<p className='text-sm font-bold text-white/50 md:text-xl'>
 										Категория: {item.category.title}
 									</p>

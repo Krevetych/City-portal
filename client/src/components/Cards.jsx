@@ -20,8 +20,6 @@ const Cards = () => {
 		}
 	}
 
-	console.log(problem?.length)
-
 	return (
 		<>
 			{problem?.length === 0 || problem === undefined ? null : (
