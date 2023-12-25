@@ -9,13 +9,22 @@ const RealTimeCount = () => {
 
 	useEffect(() => {
 		let time = setInterval(() => {
-			setCount(problem?.filter(e => e.status === 'Решена').length)
+			const prevCount = problem?.filter(e => e.status === 'Решена').length
+			if (prevCount !== count) {
+				playMusic()
+			}
+			setCount(prevCount)
 		}, 1000)
 
 		return () => {
 			clearInterval(time)
 		}
 	})
+
+	const playMusic = () => {
+		const audio = new Audio('./notify.mp3')
+		audio.play()
+	}
 
 	return (
 		<div
