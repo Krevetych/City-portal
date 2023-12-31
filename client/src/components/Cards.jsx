@@ -37,7 +37,7 @@ const Cards = () => {
 							</option>
 						))}
 					</select>
-					<div className='mt-5 flex flex-col gap-y-5'>
+					<div className='mt-5 flex gap-y-5'>
 						{data()?.map(item => (
 							<div key={item.id}>
 								<Card item={item} />

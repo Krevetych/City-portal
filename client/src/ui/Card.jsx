@@ -10,6 +10,7 @@ const Card = ({ item }) => {
 	const { user } = useContext(AuthContext)
 	const [edit, setEdit] = useState(false)
 	const [size, setSize] = useState()
+	const [rej, setRej] = useState(false)
 	const [photoErr, setPhotoErr] = useState()
 	const [success, setSuccess] = useState()
 	const location = useLocation()
@@ -76,11 +77,11 @@ const Card = ({ item }) => {
 	}
 
 	return (
-		<>
+		<div className='p-4'>
 			<p className='text-danger font-bold'>{photoErr}</p>
 			<p className='text-success font-bold'>{success}</p>
 			<div className='relative'>
-				{item?.afterImg === null || item?.status === 'Отклонена' ? (
+				{item?.afterImg === null ? (
 					<>
 						<img
 							src={item?.beforeImg}
@@ -140,7 +141,9 @@ const Card = ({ item }) => {
 			</div>
 			<div className='mt-2 md:px-5'>
 				<div className='flex items-center justify-between gap-x-2'>
-					<p className='font-bold text-xl text-ellipsis overflow-hidden line-clamp-1 md:text-2xl'>{item?.title}</p>
+					<p className='font-bold text-xl text-ellipsis overflow-hidden line-clamp-1 md:text-2xl'>
+						{item?.title}
+					</p>
 					<p className='text-sm font-semibold text-ellipsis overflow-hidden line-clamp-1 text-white/50 md:text-md'>
 						{item?.category?.title}
 					</p>
@@ -265,7 +268,7 @@ const Card = ({ item }) => {
 					Удалить
 				</button>
 			</div>
-		</>
+		</div>
 	)
 }
 

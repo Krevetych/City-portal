@@ -9,6 +9,7 @@ import Category from '../components/modals/Category'
 import CategoryForm from '../ui/CategoryForm'
 import Card from '../ui/Card'
 import { NavLink } from 'react-router-dom'
+import DeleteCategoryCard from '../ui/DeleteCategoryCard'
 
 const Problems = () => {
 	useTitle({ title: 'Заявки' })
@@ -80,6 +81,7 @@ const Problems = () => {
 				<div className={`flex justify-center`}>
 					<ProblemForm />
 					<CategoryForm />
+					<DeleteCategoryCard />
 				</div>
 			)}
 			<p className='hidden items-center justify-center text-4xl font-bold md:flex'>
@@ -104,7 +106,7 @@ const Problems = () => {
 							</option>
 						))}
 					</select>
-					<div className='mt-5 flex flex-col gap-y-5'>
+					<div className='mt-5 grid grid-cols-2 gap-4'>
 						{data()?.map(item => (
 							<div key={item.id}>
 								<Card item={item} />

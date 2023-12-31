@@ -1,9 +1,13 @@
-const AuthBtn = ({ title, onClick }) => {
+const AuthBtn = ({ title, onClick, color }) => {
 	return (
 		<>
 			<button
 				type='submit'
-				className='bg-primary rounded-lg duration-500 mt-5 py-2 px-4 text-xl font-semibold hover:bg-secondary md:text-2xl'
+				className={`${
+					color ? `bg-${color}` : 'bg-primary'
+				} rounded-lg duration-500 mt-5 py-2 px-4 text-xl font-semibold ${
+					color ? '' : 'hover:bg-secondary'
+				} md:text-2xl`}
 				onClick={onClick}
 			>
 				{title}
